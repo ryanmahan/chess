@@ -9,6 +9,6 @@ piece.move(gameBoard, 5, 7);
 print(gameBoard);
 
 piece = gameBoard.getSpace(1, 4).piece
-piece.move(gameBoard, 3, 4);
+piece.move(gameBoard, 5, 4);
 
 print(gameBoard)

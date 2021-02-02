@@ -47,7 +47,7 @@ class Bishop(Piece):
 
   def move(self, board, x, y):
     assert(self.location[0] - x is self.location[1] - y)
-    if (self.location[0] is not x):
+    # if (self.location[0] is not x):
       # TODO: ROOK CANT MOVE THROUGH PIECES
       # TODO: NEITHER CAN QUEEN
       # TODO: They can land on pieces though
