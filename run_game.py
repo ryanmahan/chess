@@ -1,14 +1,12 @@
 from game.Board import Board;
+import chess;
 
-gameBoard = Board();
-print(gameBoard);
+board = chess.Board();
 
-piece = gameBoard.getSpace(7, 7).piece;
-piece.move(gameBoard, 5, 7);
-
-print(gameBoard);
-
-piece = gameBoard.getSpace(1, 4).piece
-piece.move(gameBoard, 5, 4);
-
-print(gameBoard)
+print(board)
+print(board.legal_moves)
+moveList = [move for move in board.legal_moves];
+board.push(moveList[0])
+print(board)
+board.pop()
+print(board)
