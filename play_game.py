@@ -1,7 +1,7 @@
 import chess;
 from datetime import datetime;
 import numpy as np;
-from heuristics import randomHeuristic, number_of_attacking_squares, opposing_piece_sum, custom;
+from heuristics import randomHeuristic, number_of_attacking_squares, custom;
 from alphabeta import alphabeta;
 
 MODE = "DEBUG"
@@ -46,7 +46,7 @@ while board.is_game_over() is False:
   if player_is_white:
     move = get_player_move(board);
   else:
-    alpha_return = alphabeta(board, 4, np.inf * -1, np.inf, True, custom(False));
+    alpha_return = alphabeta(board, 6, np.inf * -1, np.inf, True, custom(False));
     move = alpha_return["move"]
   assert(board.is_legal(move))
   board.push(move)
@@ -54,7 +54,7 @@ while board.is_game_over() is False:
   if not player_is_white:
     move = get_player_move(board);
   else:
-    alpha_return = alphabeta(board, 4, np.inf * -1, np.inf, True, custom(False));
+    alpha_return = alphabeta(board, 6, np.inf * -1, np.inf, True, custom(False));
     move = alpha_return["move"]
 
   assert(board.is_legal(move))
